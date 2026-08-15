@@ -1,12 +1,24 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+   selector :'App-Doc',
+   templateUrl :'app.html'
 })
-export class App {
-  protected readonly title = signal('AngularApp');
+
+export class myApp{
+  Name  = signal("Ali")
+  fname = signal("Ali")
+  Num = signal(0)
+  fullName(){
+    this.Name.set(`${this.fname()} khan buck`)
+  }
+  Increase(){
+    this.Num.update(e=>e+1)
+  }
+  Decrease(){
+    this.Num.update(e=>e-1)
+  }
+  Reset(){
+    this.Num.set(0)
+  }
 }
