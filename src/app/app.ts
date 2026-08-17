@@ -1,24 +1,18 @@
-import { Component, signal } from "@angular/core";
+import { Component, computed, signal } from "@angular/core";
 
 @Component({
-   selector :'App-Doc',
-   templateUrl :'app.html'
+   selector:'App' ,
+   templateUrl:'app.html' ,
+   styleUrl :'app.css'
 })
-
-export class myApp{
-  Name  = signal("Ali")
-  fname = signal("Ali")
-  Num = signal(0)
-  fullName(){
-    this.Name.set(`${this.fname()} khan buck`)
-  }
-  Increase(){
-    this.Num.update(e=>e+1)
-  }
-  Decrease(){
-    this.Num.update(e=>e-1)
-  }
-  Reset(){
-    this.Num.set(0)
-  }
+export class myApp {
+   price = signal(20)
+   Quentity = signal(5)
+   total = computed(()=>(this.price()*this.Quentity()))
+   increase(){
+      this.Quentity.update(e=>e+1)
+   }
+   decrease(){
+      this.Quentity.update(e=>e-1)
+   }
 }

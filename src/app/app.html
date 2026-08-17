@@ -1,13 +1,5 @@
-<section class="w-screen h-screen flex justify-center items-center">
-    <div class="w-64 h-3/4 box-border bg-gray-400 flex flex-col justify-center items-center p-2 gap-4">
-        <h1>Name   : {{Name()}}</h1>
-        <h1>fname  : {{fname()}}</h1>
-        <h1>Number : {{Num()}}</h1>
-        <div class="w-full flex flex-wrap justify-evenly items-center gap-4">
-            <button (click)="fullName()" class="w-2/5 bg-blue-600 text-white text-center rounded-sm p-1 font-semibold">Full Name</button>
-            <button (click)="Increase()" class="w-2/5 bg-blue-600 text-white text-center rounded-sm p-1 font-semibold">Increase</button>
-            <button (click)="Decrease()" class="w-2/5 bg-blue-600 text-white text-center rounded-sm p-1 font-semibold">Decrease</button>
-            <button (click)="Reset()"    class="w-2/5 bg-blue-600 text-white text-center rounded-sm p-1 font-semibold">Reset</button>
-        </div>
-    </div>
-</section>
+<h1>Price per Kg {{price()}}</h1>
+<h1>Quentity : {{Quentity()}}</h1>
+<h1>Total Price: {{total()}}</h1>
+<button (click)="increase()">increase</button>
+<button (click)="decrease()">Decrease</button>
