@@ -1,5 +1,9 @@
-<h1>Price per Kg {{price()}}</h1>
-<h1>Quentity : {{Quentity()}}</h1>
-<h1>Total Price: {{total()}}</h1>
-<button (click)="increase()">increase</button>
-<button (click)="decrease()">Decrease</button>
+<h1>Name : {{User().Name}}</h1>
+<h1>Age  : {{User().age}}</h1>
+@if(User().age >= 18){
+    <h1>User Can Vote</h1>
+}@else {
+    <h1>User is Child</h1>
+}
+
+<button (click)="increaseAge()">IncreaseAge</button>
