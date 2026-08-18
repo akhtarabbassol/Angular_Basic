@@ -1,20 +1,12 @@
-import { Component, signal } from "@angular/core";
-
+import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 @Component({
-   selector:'App ',
-   templateUrl:'app.html',
+   selector :'App' ,
+   imports :[FormsModule] ,
+   templateUrl :'app.html' ,
    styleUrl :'app.css'
 })
-
 export class myApp{
-     User = signal({
-      Name : 'Ali' ,
-      age : 12 
-     })
-     increaseAge(){
-      this.User.update(e=>({
-         ...e ,
-         age : e.age+1
-      }))
-     }
+     email:string = '' 
+     password:string = ''
 }

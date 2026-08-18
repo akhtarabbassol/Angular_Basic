@@ -1,9 +1,39 @@
-<h1>Name : {{User().Name}}</h1>
-<h1>Age  : {{User().age}}</h1>
-@if(User().age >= 18){
-    <h1>User Can Vote</h1>
-}@else {
-    <h1>User is Child</h1>
-}
-
-<button (click)="increaseAge()">IncreaseAge</button>
+<section class="w-screen h-screen flex flex-col justify-center items-center gap-5">
+  <form
+    class="w-2/7 h-2/6 bg-gray-400 box-border rounded-sm p-5 flex flex-col justify-center items-center gap-4"
+  >
+    <input
+      placeholder="Enter Email"
+      type="email"
+      maxlength="25"
+      [(ngModel)]="email"
+      name="email"
+      class="w-3/5 bg-white rounded-sm text-black"
+    />
+    <input
+      placeholder="Enter Password"
+      type="password"
+      maxlength="8"
+      [(ngModel)]="password"
+      name="password"
+      class="w-3/5 bg-white rounded-sm text-black"
+    />
+    <button class="w-3/5 h-max p-2 bg-green-700 text-white text-xl rounded-sm cursor-pointer">
+      Login
+    </button>
+  </form>
+  <div
+    class="w-2/7 h-2/6 bg-gray-400 box-border rounded-sm p-5 flex flex-col justify-center items-center gap-4"
+  >
+    <h1
+      class="w-6/7 h-2/6 bg-gray-400 box-border rounded-sm p-5 flex flex-col justify-center items-center gap-4"
+    >
+      Email : {{ email }}
+    </h1>
+    <h1
+      class="w-6/7 h-2/6 bg-gray-400 box-border rounded-sm p-5 flex flex-col justify-center items-center gap-4"
+    >
+      Password : {{ password }}
+    </h1>
+  </div>
+</section>
