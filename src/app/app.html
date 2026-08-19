@@ -1,4 +1,8 @@
-<App2 [(num)]="count"></App2>
-<h1>Text in Parent : {{count()}}</h1>
-<button (click)="Increase()">INcrease</button>
-<button (click)="Decrease()">Decrease</button>
+   <div class="w-54 h-40 bg-gray-500 rounded-md  flex flex-col justify-center items-center">
+    <h1 class="font-semibold text-white">Id : {{ShowUser().Id}}</h1>
+    <h1 class="font-semibold text-white">Name : {{ShowUser().Name}}</h1>
+    <h1 class="font-semibold text-white">PayMethod : {{ShowUser().Pmethod}}</h1>
+   </div>
+   <button class="bg-green-400 text-white font-semibold"
+   (click)="ShowNext()"
+   >ChangeUser</button>
