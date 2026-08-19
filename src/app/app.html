@@ -1,8 +1,10 @@
-   <div class="w-54 h-40 bg-gray-500 rounded-md  flex flex-col justify-center items-center">
-    <h1 class="font-semibold text-white">Id : {{ShowUser().Id}}</h1>
-    <h1 class="font-semibold text-white">Name : {{ShowUser().Name}}</h1>
-    <h1 class="font-semibold text-white">PayMethod : {{ShowUser().Pmethod}}</h1>
-   </div>
-   <button class="bg-green-400 text-white font-semibold"
-   (click)="ShowNext()"
-   >ChangeUser</button>
+<div class="w-28 h-28 rounded-md text-white font-semibold flex flex-col justify-center
+items-center bg-gray-600 gap-1.5">
+    <h1>{{SelectUser().id}}</h1>
+    <h1>{{SelectUser().Name}}</h1>
+    <h1>{{SelectUser().Desination}}</h1>
+    <h1></h1>
+</div>
+
+<button class= "w-20 bg-blue-600 rounded-sm text-white text-center
+font-semibold" (click)="ChangeSec()">Change</button>
