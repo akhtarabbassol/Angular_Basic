@@ -1,15 +1,18 @@
-import { Component } from "@angular/core";
+import { Component, model } from "@angular/core";
+import { childClass } from "./ChildComponent";
 
 @Component({
-   selector:'App' ,
-   templateUrl:'app.html' ,
-   styleUrl :'app.css'
+    selector :'App' ,
+    imports:[childClass] ,
+    templateUrl :'app.html',
+    styleUrl :'app.css'
 })
 export class myApp{
-   
-   num1:number = 19 
-   num2:number = 29 
-   num3:number = 37
-   numbers:number[]=[1,2,3,4,5,6,7,8,9,10]
-
+    count = model(0)
+    Increase(){
+        this.count.update(e=>e+1)
+    }
+    Decrease(){
+        this.count.update(e=>e-1)
+    }
 }

@@ -1,21 +1,4 @@
-<section class="w-screen h-screen box-border bg-gray-200 p-4 flex flex-wrap gap-5">
- <div class="w-1/6 h-2/3 bg-gray-600 font-bold text-white rounded-sm flex flex-col justify-center
- items-center">
-  @for(i of numbers ; track i){
-    <h1>{{i}} X {{num1}} = {{i * num1}}</h1>
-  }
-</div>
-
-<div class="w-1/6 h-2/3 bg-gray-600 font-bold text-white rounded-sm flex flex-col justify-center
- items-center">
-  @for(i of numbers; track i){
-    <h1>{{i}} X {{num2}} = {{i * num2}}</h1>
-  }
-</div>
-  <div class="w-1/6 h-2/3 bg-gray-600 font-bold text-white rounded-sm flex flex-col justify-center
- items-center">
-@for(i of numbers; track i){
-  <h1>{{i}} X  {{num3}} = {{i * num3}}</h1>
-}
-</div>
-</section>
+<App2 [(num)]="count"></App2>
+<h1>Text in Parent : {{count()}}</h1>
+<button (click)="Increase()">INcrease</button>
+<button (click)="Decrease()">Decrease</button>
